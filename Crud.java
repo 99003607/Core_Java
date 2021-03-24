@@ -17,6 +17,7 @@ public class CrudApp {
 		System.out.println("Enter value:");
 		value=sc.next();
 		h.put(key, value);
+		System.out.println("Created successfully");
 	}
 	//display
 	static void display()
@@ -36,9 +37,17 @@ public class CrudApp {
 		display();
 		System.out.println("Enter the key to update");
 		key=sc.nextInt();
+		if(h.containsKey(key))
+		{
 		System.out.println("Enter the value to update");
 		value=sc.next();
 		h.put(key, value);
+		System.out.println("updated succesfully");
+		}
+		else
+		{
+			System.out.println("Specified key is not present");
+		}
 		
 	}
 	//delete
@@ -50,6 +59,7 @@ public class CrudApp {
 		System.out.println("Enter the key to delete");
 		key=sc.nextInt();
 		h.remove(key);
+		System.out.println("Deleted successfully");
 	}
 	
 	public static void main(String[] args) {
@@ -57,7 +67,8 @@ public class CrudApp {
 		System.out.println("----Welcome to the CRUD apllication----");
 		do
 		{
-			System.out.println("\n1.Create \n2.Read \n3.Update \n4.Delete \n5.exit");
+			System.out.println("----MENU----");
+			System.out.println("1.Create \n2.Read \n3.Update \n4.Delete \n5.exit");
 			System.out.println("Enter your choice");
 			ch=sc.nextInt();
 			switch(ch)
