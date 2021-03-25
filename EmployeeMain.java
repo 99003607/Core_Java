@@ -38,12 +38,7 @@ class Employee implements Comparable<Employee>
 	}
 	@Override
 	public int compareTo(Employee e) {
-		/*if(employeeName.equals(e.employeeName))
-		{
-			return(0);
-		}*/
 		return(employeeName.compareTo(e.employeeName));
-		//return 0;
 	}
 	
 	
