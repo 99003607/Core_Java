@@ -51,8 +51,14 @@ public class App
          {
          	case 1: //inserting value
          			st=con.prepareStatement("insert into student values(?,?)");
-         			st.setInt(1, 102);
-         			st.setString(2, "brave");
+			 	int id;
+			 	String name;
+			 	System.out.println("Enter student ID:");
+			 	id=sc.nextInt();
+			 	System.out.println("Enter student name:");
+			 	name=sc.next();
+         			st.setInt(1, id);
+         			st.setString(2, name);
          			st.executeUpdate();
          			System.out.println("New values inserted successfully");
          			break;
